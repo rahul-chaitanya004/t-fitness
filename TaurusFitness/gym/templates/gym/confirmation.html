@@ -1,0 +1,9 @@
+{% extends 'gym/base.html' %}
+
+{% block content %}
+<h2>Registration Confirmation</h2>
+<p>Thank you, {{ membership.name }}!</p>
+<p>You have successfully registered for the {{ membership.package.name }} package.</p>
+<p>Start Date: {{ membership.start_date }}</p>
+<p>Price: {{ membership.price }} rup/year</p>
+{% endblock %}

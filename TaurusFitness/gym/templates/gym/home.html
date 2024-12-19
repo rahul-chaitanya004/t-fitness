@@ -1,0 +1,30 @@
+{% extends 'gym/base.html' %}
+
+{% block content %}
+<h2>Welcome to Taurus Fitness</h2>
+<h3>Our Packages</h3>
+<div class="package">
+    <h3>Silver Package</h3>
+    <p>Price: 6000 INR/year</p>
+    <p>Basic monitoring and monthly body assessment.</p>
+</div>
+<div class="package">
+    <h3>Gold Package</h3>
+    <p>Price: 11000 INR/year</p>
+    <p>Intermediate package with personal monitoring, basic diet, and frequent body assessment.</p>
+</div>
+<div class="package">
+    <h3>Platinum Package</h3>
+    <p>Price: 15000 INR/year</p>
+    <p>Advanced package with personal training, customized diet, and frequent body assessment.</p>
+</div>
+<ul>
+    {% for package in packages %}
+    <li>
+        <h4>{{ package.name }} - {{ package.price }} rup/year</h4>
+        <p>{{ package.description }}</p>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
+
